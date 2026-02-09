@@ -9,15 +9,27 @@
       "Courier New", monospace;
     --color-red-50: oklch(97.1% 0.013 17.38);
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-blue-50: oklch(97% 0.014 254.604);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -171,8 +183,83 @@
   }
 }
 @layer utilities {
+  .z-4 {
+    z-index: 4;
+  }
+  .z-5 {
+    z-index: 5;
+  }
+  .z-40 {
+    z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
+  .mr-20 {
+    margin-right: calc(var(--spacing) * 20);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .flex {
+    display: flex;
+  }
   .table {
     display: table;
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-25 {
+    height: calc(var(--spacing) * 25);
+  }
+  .h-35 {
+    height: calc(var(--spacing) * 35);
+  }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+  .h-54 {
+    height: calc(var(--spacing) * 54);
+  }
+  .h-55 {
+    height: calc(var(--spacing) * 55);
+  }
+  .h-255 {
+    height: calc(var(--spacing) * 255);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-full {
+    width: 100%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -180,31 +267,275 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .bg-\[\#\#EA048C\] {
+    background-color: ##EA048C;
+  }
+  .bg-\[\#\#EA048\] {
+    background-color: ##EA048;
+  }
+  .bg-\[\#EA048C\] {
+    background-color: #EA048C;
+  }
+  .bg-\[\#F5F5F5\] {
+    background-color: #F5F5F5;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-\[d\] {
+    background-color: d;
+  }
+  .bg-\[dist\/img\/heroImg\.jpg\] {
+    background-color: dist/img/heroImg.jpg;
+  }
+  .bg-\[dist\] {
+    background-color: dist;
+  }
+  .bg-\[do\] {
+    background-color: do;
+  }
+  .bg-\[dos\] {
+    background-color: dos;
+  }
+  .bg-\[udist\/img\/heroImg\.jpg\] {
+    background-color: udist/img/heroImg.jpg;
+  }
+  .bg-\[urdist\/img\/heroImg\.jpg\] {
+    background-color: urdist/img/heroImg.jpg;
+  }
+  .bg-\[urldist\/img\/heroImg\.jpg\] {
+    background-color: urldist/img/heroImg.jpg;
+  }
+  .bg-blue-50 {
+    background-color: var(--color-blue-50);
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
+  .bg-\[url\(\'\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/diimg\/heroImg\.jpg\'\)\] {
+    background-image: url('/diimg/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/dimg\/heroImg\.jpg\'\)\] {
+    background-image: url('/dimg/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/disimg\/heroImg\.jpg\'\)\] {
+    background-image: url('/disimg/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/distimg\/heroImg\.jpg\'\)\] {
+    background-image: url('/distimg/heroImg.jpg');
+  }
+  .bg-\[url\(\'\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'de\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('de/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'de\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('de/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'dee\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('dee/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'dee\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('dee/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-d\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-d/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-de\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-de/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-di\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-di/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-div\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-div/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-25-\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-25-/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-25\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-25/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-252\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-252/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2525\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2525/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2526-\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2526-/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2526-p\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2526-p/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive-2526\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive-2526/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep-dive\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep-dive/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deep\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deep/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepd\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepd/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepd\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepd/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdi\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdi/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdi\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdi/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdiv\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdiv/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdiv\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdiv/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdive-\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdive-/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdive-3\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdive-3/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdive\/deep-dive-2526-p3-superawesometeamnaam\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdive/deep-dive-2526-p3-superawesometeamnaam/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'deepdive\/dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('deepdive/dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(\'dist\/img\/heroImg\.jpg\'\)\] {
+    background-image: url('dist/img/heroImg.jpg');
+  }
+  .bg-\[url\(dist\/img\/heroImg\.jpg\)\] {
+    background-image: url(dist/img/heroImg.jpg);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-12 {
+    padding: calc(var(--spacing) * 12);
+  }
+  .p-15 {
+    padding: calc(var(--spacing) * 15);
+  }
+  .p-16 {
+    padding: calc(var(--spacing) * 16);
+  }
+  .p-18 {
+    padding: calc(var(--spacing) * 18);
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-red-50 {
-    color: var(--color-red-50);
+  .text-gray-600 {
+    color: var(--color-gray-600);
   }
-  .text-red-500 {
-    color: var(--color-red-500);
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -212,6 +543,53 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .hover\:bg-\[\#\#EA048C\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: ##EA048C;
+      }
+    }
+  }
+  .hover\:bg-\[\#EA048C\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #EA048C;
+      }
+    }
+  }
+  .hover\:bg-\[\#EA048\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #EA048;
+      }
+    }
+  }
+  .hover\:bg-\[\#\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #;
+      }
+    }
+  }
+  .hover\:bg-\[\#c70372\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #c70372;
+      }
+    }
+  }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
   }
 }
 @property --tw-border-style {
