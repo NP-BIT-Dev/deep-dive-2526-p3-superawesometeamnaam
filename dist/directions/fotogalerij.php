@@ -22,7 +22,7 @@ foreach ($fotos as $foto) {
   <link href="../output.css" rel="stylesheet">
 </head>
 <body>
-   <nav class="bg-gradient-to-r from-[#EA048C] via-[#6C6D71] to-[#6C6D71] via-[51%] w-full max-h-40">
+   <nav class="bg-[linear-gradient(to_right,#000000_0%,#EA048C_49%,#000000_100%)] w-full max-h-40">
     <div class="itemsNav flex justify-between items-center max-h-30">
       <div class="relative left-30 top-15">
         <img src="../img/logoWithBg.svg" alt="logoArc" class="h-50">
@@ -31,22 +31,26 @@ foreach ($fotos as $foto) {
       <div class="directions">
         <ul class="flex">
           <li>
-            <a href="../../index.php" class="text-white font-bold px-4 hover:text-[#c70372]">Home</a>
+            <a href="../../index.php" class="text-white  px-4 hover:font-bold hover:text-2xl duration-300">Home</a>
           </li>
           <li>
-            <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Nieuws</a>
+            <a href="#" class="text-white  px-4 hover:font-bold hover:text-2xl duration-300">Nieuws</a>
           </li>
           <li>
-            <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Fotogalerij</a>
+            <a href="fotogalerij.php" class="text-white  px-4 hover:font-bold hover:text-2xl duration-300">Fotogalerij</a>
+          </li>
+         <li>
+            <a href="#" class="text-white  px-4 hover:font-bold hover:text-2xl duration-300">Trainers</a>
           </li>
           <li>
-            <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Login</a>
+            <a href="#" class="text-white  px-4 hover:font-bold hover:text-2xl duration-300">Inschrijven</a>
           </li>
         </ul>
       </div>
 
       <div class="btn mr-20">
-        <button type="button" class="bg-[#EA048C] hover:bg-[#c70372]  text-white font-bold px-4 rounded">CONTACT</button>
+                <button type="button" class="bg-[#EA048C] hover:bg-[#c70372]  text-white font-bold px-4 py-2 border rounded">CONTACT</button>
+
       </div>
     </div>
    </nav>
@@ -83,10 +87,6 @@ foreach ($fotos as $foto) {
 
 
 <?php endforeach; ?>
-    <!-- hero starting -->
-      
-
-     <!-- hero ending -->
 
 </body>
 </html>
