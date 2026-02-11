@@ -21,7 +21,7 @@
             <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Nieuws</a>
           </li>
           <li>
-            <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Fotogalerij</a>
+            <a href="dist/directions/fotogalerij.php" class="text-white font-bold px-4 hover:text-[#c70372]">Fotogalerij</a>
           </li>
           <li>
             <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Login</a>
