@@ -2,18 +2,15 @@
 
 require "db.php";
 
-$categorie = $_GET['cat'] ?? null;
-
-if ($categorie) {
-    $stmt = $pdo->prepare("SELECT * FROM fotos WHERE categorie = ?");
-    $stmt->execute([$categorie]);
-} else {
-    $stmt = $pdo->query("SELECT * FROM fotos");
-}
-
+$stmt = $pdo->query("SELECT * FROM fotos ORDER BY categorie DESC");
 $fotos = $stmt->fetchAll();
 
-$cats = $pdo->query("SELECT DISTINCT categorie FROM fotos")->fetchAll();
+$groups = [];
+
+foreach ($fotos as $foto) {
+    $groups[$foto['categorie']][] = $foto;
+}
+
 ?>
 
 
@@ -34,7 +31,7 @@ $cats = $pdo->query("SELECT DISTINCT categorie FROM fotos")->fetchAll();
       <div class="directions">
         <ul class="flex">
           <li>
-            <a href="index.php" class="text-white font-bold px-4 hover:text-[#c70372]">Home</a>
+            <a href="../../index.php" class="text-white font-bold px-4 hover:text-[#c70372]">Home</a>
           </li>
           <li>
             <a href="#" class="text-white font-bold px-4 hover:text-[#c70372]">Nieuws</a>
@@ -67,36 +64,25 @@ $cats = $pdo->query("SELECT DISTINCT categorie FROM fotos")->fetchAll();
 
 
 
-   <h1 class="text-3xl font-bold mb-6">Categories</h1>
 
-<!-- KATEGORİ FİLTRE -->
-<div class="mb-6 space-x-2">
-    <?php foreach($cats as $c): ?>
-        <a href="?cat=<?= $c['categorie'] ?>"
-           class="px-4 py-2 bg-pink-500 text-white rounded">
-           <?= $c['categorie'] ?>
-        </a>
-    <?php endforeach; ?>
-</div>
+<?php foreach($groups as $categorie => $fotos): ?>
 
-
-<!-- FOTO GRID -->
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <h2 class="text-xl font-bold text-center mb-8 uppercase mt-20">
+        <?= $categorie ?>
+    </h2>
+<div class="columns-1 md:columns-3 lg:columns-4 gap-6 space-y-6 px-30 p-4">
 
 <?php foreach($fotos as $foto): ?>
 
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden">
-        <img src="<?= $foto['url'] ?>"
-             class="w-full h-64 object-cover hover:scale-110 transition">
-        
-        <div class="p-3 text-center font-semibold">
-            <?= $foto['categorie'] ?>
-        </div>
-    </div>
+    <img src="<?= $foto['url'] ?>"
+         class="w-full rounded-xl shadow-lg break-inside-avoid">
 
 <?php endforeach; ?>
 
 </div>
+
+
+<?php endforeach; ?>
     <!-- hero starting -->
       
 
