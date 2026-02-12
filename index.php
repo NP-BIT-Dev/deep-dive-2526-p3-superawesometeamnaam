@@ -102,7 +102,7 @@
 </section>
 
 <section class="bg-[#d9d9d9] h-150 m-auto w-3/5">
-  <div class="">
+  <div class="p-5">
     <div class="content">
       <h2 class="text-center mt-10 font-bold text-4xl">
         Kom je een keertje kijken?
@@ -110,9 +110,12 @@
     <div class="p-1 w-20 bg-pink-500 mx-auto mt-4 mb-8 rounded-full"></div>
 
     </div>
-    <p class="leading-relaxed text-center ">
-      ARC-NN is een actieve vereniging, wij trainen 3 keer per week in de sporthal aan de D.U. Stikkerlaan 6 te Winschoten. Naast de ‘gewone’ trainingen en uiteraard de wedstrijden, organiseert de vereniging allerlei andere activiteiten en evenementen zoals rollerdisco’s, clubdagen, optredens, promoties en een wervelende Kerstshow. Deze show is een daverend succes en een mooie afsluiting van het jaar. Aan deze show doen alle leden mee van beginner tot recreant. De voorbereiding neemt dan ook een heel jaar in beslag. De organisatie coördineert de plannen, de trainers zetten alle nummers in elkaar, vrijwilligers werken mee aan de kostuums, de bouwploeg zorgt voor de opbouw en decor en zo is  iedereen bij de vereniging betrokken.
-    </p>
+    <div class="paragraf m-auto h-full px-13">
+
+      <p class="leading-relaxed">
+        ARC-NN is een actieve vereniging, wij trainen 3 keer per week in de sporthal aan de D.U. Stikkerlaan 6 te Winschoten. Naast de ‘gewone’ trainingen en uiteraard de wedstrijden, organiseert de vereniging allerlei andere activiteiten en evenementen zoals rollerdisco’s, clubdagen, optredens, promoties en een wervelende Kerstshow. Deze show is een daverend succes en een mooie afsluiting van het jaar. Aan deze show doen alle leden mee van beginner tot recreant. De voorbereiding neemt dan ook een heel jaar in beslag. De organisatie coördineert de plannen, de trainers zetten alle nummers in elkaar, vrijwilligers werken mee aan de kostuums, de bouwploeg zorgt voor de opbouw en decor en zo is  iedereen bij de vereniging betrokken.
+      </p>
+    </div>
   </div>
 </section>
 
